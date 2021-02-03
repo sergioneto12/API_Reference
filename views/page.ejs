@@ -1,0 +1,57 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/styles/page.css">
+    <title>API</title>
+</head>
+<body>
+    <div class="top">
+        <div class="box" id="heading">
+            <h1><%= kindOfDay %></h1>
+            <time></time>
+
+        </div>
+    </div>
+
+    <div class="search-room">
+        <div class="form">
+            <input type="text" class="search" name="search" placeholder="" method="GET" required onclick="title"></input>
+            <label for="search" class="search-label">
+                <span class="label-span">Procurar</span>
+            </label>
+   
+        </div> 
+
+        <h2></h2>
+    </div>
+       
+    <script>
+        async function getContent() {
+            try {
+                const response = await fetch('http://localhost:3000/' || 'process.env.port')
+
+                const data = await response.json()
+            } catch {
+                console.log('Sem sucesso na conexão')
+            }
+        }
+
+        getContent()
+
+        function title(items) {
+
+            let output = '';
+
+            for (let item of items) {
+                output += `<li>${item.titulo}</li>`
+        }
+            document.querySelector('h2').innerHTML = output 
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+/*html {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    box-sizing: border-box;
+}
+
+.top {
+    background-color: #4ABDAC;
+    padding: 0.1%;
+}
+
+.box h1 {
+    color: #fff;
+    padding: 10px; 
+}
+
+.box {
+    margin: 50px auto;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+}
+
+#heading {
+    background-color: #FC4A1A;
+    justify-content: space-around;
+    width: fit-content;
+}
+
+.search-room {
+    background-color: #4ABDAC;
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    font-family: sans-serif;
+}
+
+.form {
+    width: 50%;
+    position: relative;
+    height: 50px;
+    border: none;
+    overflow: hidden;
+}
+
+.form input {
+    width: 100%;
+    height: 100%;
+    color: white;
+    background-color: #4ABDAC;
+    padding-top: 10px;
+    outline: none;
+    border: none;
+}
+
+.form label {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid #F7C733;
+}   
+
+.form label::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    border-bottom: 3px solid #F7C733;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.label-span {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    transition: all 0.3s ease;
+}
+
+.form input:focus + .search-label .label-span,
+.form input:valid + .search-label .label-span{
+    transform: translateY(-150%);
+    font-size: 15px;
+    color: #F7C733;
+}
+
+.form input:focus + .search-label::after,
+.form input:valid + .search-label::after {
+    transform: translateX(0%);
+}
+
+button {
+    overflow: visible;
+}
+
+
+
